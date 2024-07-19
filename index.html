@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/88a21f6f30.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/logo2.png" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Mazen</span> Mostafa, <br>a Web Developer </h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/user1.png" alt="About Me Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am a recent Software Engineering graduate specializing 
+                        in Full-Stack Development. With a strong foundation 
+                        in React.js, HTML, CSS, JavaScript, and MongoDB
+                        I am passionate about creating intuitive 
+                        and user-friendly web applications.
+                        My hands-on experience includes projects
+                        where I have developed responsive user interfaces and interactive features.
+                        I thrive in dynamic team environments, where I can contribute effectively 
+                        and continuously grow. My goal is to leverage my skills and 
+                        knowledge to deliver high-quality web solutions and 
+                        to gain practical experience in 
+                        a supportive and innovative setting.
+                    </p><br>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" data-tab="skills">Skills</p>
+                        <p class="tab-links" data-tab="experience">Experience</p>
+                        <p class="tab-links" data-tab="education">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-End Development:</span><br> React.js, HTML, CSS, JavaScript, Bootstrap</li>
+                            <li><span>Back-End Development:</span><br> Node.js</li>
+                            <li><span>Database:</span><br> MongoDB, MySQL</li>
+                            <li><span>Python Development:</span><br> AI and ML Projects</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024:</span> Web Development Intern at Educational Buildings Authority</li>
+                            <li><span>2024:</span> Artificial Intelligence Intern at CodSoft</li>
+                            <li><span>2024:</span> Web Development Intern at Prodigy Infotech</li>
+                            <li><span>2024:</span> Web Development Intern at Byte Uprise</li>
+                            <li><span>2024:</span> Web Development Intern at CodeAlpha</li>
+                            <li><span>2023:</span> Summer Training at Clickit's</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - 2024:</span> Computer and Artificial Intelligence/Software Engineering Program, Helwan University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front-End Development</h2>
+                    <p>I am experienced in front-end development using React.js, HTML, CSS, and JavaScript. I specialize in creating responsive and user-friendly web interfaces.</p>
+                    <a href="./images/my-cv.pdf">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Back-End Development</h2>
+                    <p>I have knowledge in back-end development using Node.js. I can handle server-side logic and database integration to build robust web applications.</p>
+                    <a href="./images/my-cv.pdf">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Artificial Intelligence</h2>
+                    <p>I have experience in Python development, particularly in AI and ML projects. I can create intelligent systems and algorithms for data analysis and pattern recognition.</p>
+                    <a href="./images/my-cv.pdf">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/work-5.png" alt="Work 1">
+                    <div class="layer">
+                        <h3>Sign Language Video Translator</h3>
+                        <p>(ML, Python, React.js, Node.js, Flask, MongoDB)</p>
+                        <ul>
+                            <li>Developed a comprehensive platform to facilitate sign language learning using AI.</li>
+                            <li>Features a real-time sign language video translator to help users practice and improve their skills.</li>
+                            <li>Administrators can add and remove short instructional videos for learning ASL.</li>
+                            <li>Users can chat, react to posts, and leave comments, fostering a community environment.</li>
+                        </ul>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+                
+                <div class="work ">
+                    <img src="./images/9.png" alt="Work 3">
+                    <div class="layer">
+                        <h3>Movie Recommendation System</h3>
+                        <p>(Python, Node.js)</p>
+                        <ul>
+                            <li>Created a recommendation system that suggests items to users based on their preferences.</li>
+                        </ul>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+                <div class="work ">
+                    <img src="./images/5.png" alt="Work 4">
+                    <div class="layer">
+                        <h3>ChatBot</h3>
+                        <p>(Python)</p>
+                        <ul>
+                            <li>Developed a simple chatbot that responds to user inputs based on predefined rules.</li>
+                        </ul>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+                <div class="work work-hidden">
+                    <img src="./images/work-6.png" alt="Work 2">
+                    <div class="layer">
+                        <h3>Tic-Tac-Toe</h3>
+                        <p>(Python)</p>
+                        <ul>
+                            <li>Implemented an AI agent that plays the classic game of Tic-Tac-Toe against a human player.</li>
+                            <li>Used algorithms like Minimax for decision-making.</li>
+                        </ul>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+                <div class="work work-hidden">
+                    <img src="./images/66.png" alt="Work 5">
+                    <div class="layer">
+                        <h3>FreeLance System</h3>
+                        <p>(HTML, CSS, PHP, MySQL)</p>
+                        <ul>
+                            <li>Created a freelance system where freelancers can create profiles and list their skills.</li>
+                            <li>Clients can post projects and hire freelancers, with front-end, back-end, and database functionality.</li>
+                        </ul>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+                <div class="work work-hidden">
+                    <img src="./images/99.png" alt="Work 6">
+                    <div class="layer">
+                        <h3>Car Parking System</h3>
+                        <p>(Java)</p>
+                        <ul>
+                            <li>Developed a software application to manage the parking of vehicles in a parking lot.</li>
+                            <li>Implemented features such as vehicle entry/exit, parking slot allocation, fee calculation, and availability tracking.</li>
+                        </ul>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+                <div class="work work-hidden">
+                    <img src="./images/80.png" alt="Work 7">
+                    <div class="layer">
+                        <h3>Project Azure DevOps</h3>
+                        <p>(GIT, Scrum process)</p>
+                        <ul>
+                            <li>Implemented Azure DevOps for managing software development processes.</li>
+                            <li>Utilized GIT for version control and implemented the Scrum process for project management.</li>
+                            <li>Included features like backlog management, task tracking, and CI/CD pipelines.</li>
+                        </ul>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+                <div class="work work-hidden">
+                    <img src="./images/555.png" alt="Work 8">
+                    <div class="layer">
+                        <h3>Shopping Cart App</h3>
+                        <p>(React.js)</p>
+                        <ul>
+                            <li>Built an e-commerce application with a user-friendly interface for browsing products.</li>
+                            <li>Implemented functionalities for adding items to a shopping cart and managing the cart contents.</li>
+                            <li>Developed a complete checkout process.</li>
+                        </ul>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <button id="see-more-btn" class="btn">See more</button>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> mazenmostafa2022@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 01128199928</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/mazen-mostafa/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/mazenfarht" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/mazenmostafa1710?igsh=MXUyeDJ3aWNxdzRjbg==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/mazen.mostafe.9"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form id="contact-form">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Send Message</button>
+                    </form>
+                    <span id="submit-msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mazen Mostafa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            emailjs.init("KP5mi6DBn6TsWj0jp");
+        })();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const submitMessage = document.getElementById('submit-msg');
+        
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+        
+                const formData = new FormData(form);
+                const name = formData.get('Name');
+                const email = formData.get('email');
+                const message = formData.get('Message');
+        
+                const templateParams = {
+                    name: name,
+                    email: email,
+                    message: message
+                };
+        
+                emailjs.send("service1", "template_x7i2s4j", templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        submitMessage.textContent = 'Message Sent Successfully!';
+                        form.reset();
+                    }, function(error) {
+                        console.error('FAILED...', error);
+                        submitMessage.textContent = 'An error occurred. Please try again.';
+                    });
+            });
+        
+            // JavaScript for tab links
+            const tabLinks = document.querySelectorAll('.tab-links');
+            const tabContents = document.querySelectorAll('.tab-contents');
+        
+            tabLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    tabLinks.forEach(function(link) {
+                        link.classList.remove('active-link');
+                    });
+                    tabContents.forEach(function(content) {
+                        content.classList.remove('active-tab');
+                    });
+                    link.classList.add('active-link');
+                    document.getElementById(link.dataset.tab).classList.add('active-tab');
+                });
+            });
+        
+            // JavaScript for show more
+            const showMoreButton = document.getElementById('see-more-btn');
+            const workHidden = document.querySelectorAll('.work-hidden');
+        
+            showMoreButton.addEventListener('click', function() {
+                workHidden.forEach(function(work) {
+                    work.classList.toggle('work-hidden');
+                });
+                if (showMoreButton.textContent === 'See more') {
+                    showMoreButton.textContent = 'See less';
+                } else {
+                    showMoreButton.textContent = 'See more';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
