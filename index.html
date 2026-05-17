@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Mazen Mostafa — Frontend Developer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -304,220 +306,247 @@
     <section class="section projects" id="projects">
       <div class="container">
         <div class="section-label reveal">03 — Projects</div>
+
         <h2 class="section-title reveal">
           Featured <span class="accent">Work</span>
         </h2>
+
         <p class="section-sub reveal">Real projects, real impact</p>
 
         <div class="projects-featured">
-          <!-- Project 1 -->
+          <!-- Project 01 — NexCart -->
           <article class="project-card featured reveal" data-index="01">
             <div class="project-card-inner">
               <div class="project-info">
                 <div class="project-num">01</div>
+
+                <div class="project-tags-row">
+                  <span class="ptag">React.js</span>
+                  <span class="ptag">Bootstrap</span>
+                  <span class="ptag">Stripe API</span>
+                  <span class="ptag">Context API</span>
+                  <span class="ptag">Formik + Yup</span>
+                </div>
+
+                <h3 class="project-title">NexCart<br />E-Commerce</h3>
+
+                <p class="project-desc">
+                  A modern dark-mode e-commerce web application built with React
+                  and Bootstrap. Features authentication, Stripe payments, cart
+                  & wishlist system, and a responsive UI.
+                </p>
+
+                <ul class="project-features">
+                  <li>🔐 Auth system with protected routes</li>
+                  <li>💳 Stripe payment integration</li>
+                  <li>🛒 Cart & wishlist system</li>
+                  <li>🌙 Dark mode UI</li>
+                </ul>
+
+                <div class="project-links">
+                  <a
+                    href="https://nexcart-ecommerce.netlify.app/"
+                    target="_blank"
+                    class="btn btn-primary btn-sm"
+                  >
+                    Live Demo →
+                  </a>
+                  <a
+                    href="https://github.com/mazenfarht/nexcart-ecommerce"
+                    target="_blank"
+                    class="btn btn-outline btn-sm"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-visual">
+                <div class="project-img-wrap">
+                  <img
+                    src="H.png"
+                    alt="NexCart"
+                    class="project-img"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay">
+                    <span class="project-img-label">NexCart · E-Commerce</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02 — Movies Streaming -->
+          <article class="project-card featured reveal" data-index="02">
+            <div class="project-card-inner reverse">
+              <div class="project-info">
+                <div class="project-num">02</div>
+
                 <div class="project-tags-row">
                   <span class="ptag">React.js</span>
                   <span class="ptag">TMDB API</span>
                   <span class="ptag">React Router</span>
                   <span class="ptag">Responsive</span>
                 </div>
+
                 <h3 class="project-title">Movies Streaming<br />Platform</h3>
+
                 <p class="project-desc">
-                  A Netflix-inspired responsive movie streaming app with
-                  real-time data from TMDB API. Features category filtering,
-                  dynamic search, multi-page routing, and an optimized component
-                  structure for fast loading.
+                  Netflix-inspired movie streaming app using TMDB API with
+                  real-time data, search, filtering, and multi-page routing.
                 </p>
+
                 <ul class="project-features">
-                  <li>⚡ TMDB API integration for live movie data</li>
-                  <li>🔍 Search & category-based filtering</li>
-                  <li>🧭 Multi-page routing with React Router</li>
-                  <li>📱 Fully responsive across all devices</li>
+                  <li>⚡ TMDB API integration</li>
+                  <li>🔍 Search & filtering system</li>
+                  <li>🧭 React Router navigation</li>
+                  <li>📱 Fully responsive design</li>
                 </ul>
+
                 <div class="project-links">
                   <a
                     href="https://rimberio-movies.netlify.app/"
                     target="_blank"
                     class="btn btn-primary btn-sm"
-                    >Live Demo →</a
                   >
+                    Live Demo →
+                  </a>
                   <a
                     href="https://github.com/mazenfarht/movies"
                     target="_blank"
                     class="btn btn-outline btn-sm"
-                    >GitHub</a
                   >
+                    GitHub
+                  </a>
                 </div>
               </div>
+
               <div class="project-visual">
-                <div class="project-mockup movies">
-                  <div class="mockup-bar">
-                    <span></span><span></span><span></span>
-                    <div class="mockup-url">rimberio-movies.netlify.app</div>
-                  </div>
-                  <div class="mockup-screen">
-                    <div class="mockup-hero-banner">
-                      <div class="movie-badge">▶ TRENDING</div>
-                      <div class="movie-title-mock">Featured Film</div>
-                      <div class="movie-meta">Action · 2024 · ★ 8.4</div>
-                      <div class="movie-btns">
-                        <div class="mock-btn filled">▶ Play</div>
-                        <div class="mock-btn">+ List</div>
-                      </div>
-                    </div>
-                    <div class="mockup-row">
-                      <div class="row-label">Trending Now</div>
-                      <div class="movie-cards">
-                        <div class="movie-thumb c1"></div>
-                        <div class="movie-thumb c2"></div>
-                        <div class="movie-thumb c3"></div>
-                        <div class="movie-thumb c4"></div>
-                      </div>
-                    </div>
+                <div class="project-img-wrap">
+                  <img
+                    src="https://mazens-portfolio.netlify.app/images/5.png"
+                    alt="Movies Streaming"
+                    class="project-img"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay">
+                    <span class="project-img-label">Movies · TMDB API</span>
                   </div>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="project-card featured reveal" data-index="02">
-            <div class="project-card-inner reverse">
-              <div class="project-info">
-                <div class="project-num">02</div>
-                <div class="project-tags-row">
-                  <span class="ptag">React.js</span>
-                  <span class="ptag">Node.js</span>
-                  <span class="ptag">AI Chatbot</span>
-                  <span class="ptag">E-Commerce</span>
-                </div>
-                <h3 class="project-title">Lampa<br />E-Commerce</h3>
-                <p class="project-desc">
-                  A full-featured responsive e-commerce platform inspired by
-                  Amazon. Built as a freelance project with a dynamic product
-                  catalog, full cart system, clean checkout flow, and an
-                  integrated AI-powered chatbot.
-                </p>
-                <ul class="project-features">
-                  <li>🛒 Dynamic product catalog with filtering</li>
-                  <li>💳 Add/remove cart & checkout flow</li>
-                  <li>🤖 AI chatbot for customer support</li>
-                  <li>📱 Mobile-first responsive design</li>
-                </ul>
-                <div class="project-links">
-                  <a
-                    href="https://lampa-e-commerce.netlify.app/"
-                    target="_blank"
-                    class="btn btn-primary btn-sm"
-                    >Live Demo →</a
-                  >
-                  <a
-                    href="https://github.com/mazenfarht/Lampa-E-commerce"
-                    target="_blank"
-                    class="btn btn-outline btn-sm"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-              <div class="project-visual">
-                <div class="project-mockup ecommerce">
-                  <div class="mockup-bar">
-                    <span></span><span></span><span></span>
-                    <div class="mockup-url">lampa-e-commerce.netlify.app</div>
-                  </div>
-                  <div class="mockup-screen ecom-screen">
-                    <div class="ecom-nav">
-                      <div class="ecom-logo">Lampa</div>
-                      <div class="ecom-search-bar"></div>
-                      <div class="ecom-cart-icon">🛒 3</div>
-                    </div>
-                    <div class="ecom-products">
-                      <div class="ecom-product">
-                        <div class="prod-img"></div>
-                        <div class="prod-info">
-                          <div class="prod-name"></div>
-                          <div class="prod-price accent">$29.99</div>
-                        </div>
-                      </div>
-                      <div class="ecom-product">
-                        <div class="prod-img p2"></div>
-                        <div class="prod-info">
-                          <div class="prod-name"></div>
-                          <div class="prod-price accent">$44.99</div>
-                        </div>
-                      </div>
-                      <div class="ecom-product">
-                        <div class="prod-img p3"></div>
-                        <div class="prod-info">
-                          <div class="prod-name"></div>
-                          <div class="prod-price accent">$19.99</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="chatbot-bubble">🤖 Need help?</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
+          <!-- Project 03 — Sign Language -->
           <article class="project-card featured reveal" data-index="03">
             <div class="project-card-inner">
               <div class="project-info">
                 <div class="project-num">03</div>
+
                 <div class="project-tags-row">
                   <span class="ptag">React.js</span>
                   <span class="ptag">Flask</span>
                   <span class="ptag">ML / Python</span>
                   <span class="ptag">MongoDB</span>
                 </div>
-                <h3 class="project-title">
-                  Sign Language<br />Recognition Platform
-                </h3>
+
+                <h3 class="project-title">Sign Language<br />Recognition</h3>
+
                 <p class="project-desc">
-                  An AI-powered accessibility platform for sign language
-                  learning and recognition. Combines a React.js frontend with a
-                  Flask + ML backend to deliver real-time interactive feedback
-                  and an inclusive user experience.
+                  AI-powered accessibility platform for sign language
+                  recognition using React frontend and Flask ML backend.
                 </p>
+
                 <ul class="project-features">
-                  <li>🤖 AI-based sign language recognition</li>
-                  <li>♿ Built with accessibility at its core</li>
-                  <li>⚛️ Interactive React UI with real-time feedback</li>
-                  <li>🐍 Flask + Python ML backend</li>
+                  <li>🤖 Real-time sign recognition</li>
+                  <li>♿ Accessibility-focused design</li>
+                  <li>⚛️ React interactive UI</li>
+                  <li>🐍 Flask + ML backend</li>
                 </ul>
+
                 <div class="project-links">
                   <a
                     href="https://github.com/mazenfarht/sign-language-website"
                     target="_blank"
                     class="btn btn-primary btn-sm"
-                    >View on GitHub →</a
                   >
+                    GitHub →
+                  </a>
                 </div>
               </div>
+
               <div class="project-visual">
-                <div class="project-mockup sign-lang">
-                  <div class="mockup-bar">
-                    <span></span><span></span><span></span>
-                    <div class="mockup-url">sign-language-app</div>
+                <div class="project-img-wrap">
+                  <img
+                    src="https://mazens-portfolio.netlify.app/images/11.png"
+                    alt="Sign Language"
+                    class="project-img"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay">
+                    <span class="project-img-label">AI Sign Language</span>
                   </div>
-                  <div class="mockup-screen sign-screen">
-                    <div class="sign-header">Sign Language AI</div>
-                    <div class="sign-camera">
-                      <div class="camera-frame">
-                        <div class="hand-outline">✋</div>
-                        <div class="scan-line"></div>
-                      </div>
-                      <div class="sign-result">
-                        Detected: <span class="accent">Hello</span>
-                      </div>
-                    </div>
-                    <div class="sign-alphabet">
-                      <span>A</span><span>B</span><span>C</span
-                      ><span class="accent active">D</span><span>E</span
-                      ><span>F</span>
-                    </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04 — Lampa -->
+          <article class="project-card featured reveal" data-index="04">
+            <div class="project-card-inner reverse">
+              <div class="project-info">
+                <div class="project-num">04</div>
+
+                <div class="project-tags-row">
+                  <span class="ptag">React.js</span>
+                  <span class="ptag">Node.js</span>
+                  <span class="ptag">AI Chatbot</span>
+                  <span class="ptag">E-Commerce</span>
+                </div>
+
+                <h3 class="project-title">Lampa<br />E-Commerce</h3>
+
+                <p class="project-desc">
+                  Amazon-inspired e-commerce platform with AI chatbot, product
+                  catalog, and full shopping system.
+                </p>
+
+                <ul class="project-features">
+                  <li>🛒 Product catalog system</li>
+                  <li>💳 Cart & checkout flow</li>
+                  <li>🤖 AI chatbot support</li>
+                  <li>📱 Mobile-first UI</li>
+                </ul>
+
+                <div class="project-links">
+                  <a
+                    href="https://lampa-e-commerce.netlify.app/"
+                    target="_blank"
+                    class="btn btn-primary btn-sm"
+                  >
+                    Live Demo →
+                  </a>
+                  <a
+                    href="https://github.com/mazenfarht/Lampa-E-commerce"
+                    target="_blank"
+                    class="btn btn-outline btn-sm"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-visual">
+                <div class="project-img-wrap">
+                  <img
+                    src="https://mazens-portfolio.netlify.app/images/4.png"
+                    alt="Lampa"
+                    class="project-img"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay">
+                    <span class="project-img-label">Lampa · AI Store</span>
                   </div>
                 </div>
               </div>
@@ -529,24 +558,9 @@
         <div class="small-projects-title reveal">
           <span class="accent">// </span>More Projects
         </div>
+
         <div class="small-projects-grid">
-          <div class="small-card reveal">
-            <div class="small-card-icon">🎬</div>
-            <h4>Movie Recommendation System</h4>
-            <p>
-              ML-based system that suggests movies using preference similarity
-              logic. Built with Python & Node.js backend.
-            </p>
-            <div class="small-tags">
-              <span>Python</span><span>Node.js</span><span>ML</span>
-            </div>
-            <a
-              href="https://github.com/mazenfarht"
-              target="_blank"
-              class="small-link"
-              >GitHub →</a
-            >
-          </div>
+          <!-- ChatBot System -->
           <div class="small-card reveal">
             <div class="small-card-icon">🤖</div>
             <h4>ChatBot System</h4>
@@ -561,9 +575,12 @@
               href="https://github.com/mazenfarht"
               target="_blank"
               class="small-link"
-              >GitHub →</a
             >
+              GitHub →
+            </a>
           </div>
+
+          <!-- Azure DevOps -->
           <div class="small-card reveal">
             <div class="small-card-icon">📋</div>
             <h4>Azure DevOps Project</h4>
@@ -578,20 +595,50 @@
               href="https://github.com/mazenfarht"
               target="_blank"
               class="small-link"
-              >GitHub →</a
             >
+              GitHub →
+            </a>
           </div>
-          <div class="small-card reveal wp-card">
-            <div class="small-card-icon">🎨</div>
-            <h4>WordPress & UI Projects</h4>
+
+          <!-- MAZNEWS -->
+          <div class="small-card reveal">
+            <div class="small-card-icon">📰</div>
+            <h4>MAZNEWS – News Platform</h4>
             <p>
-              Custom WordPress themes, client branding, logo design, and
-              frontend UI customization at Anzemah.
+              Dynamic WordPress news platform with Dark Mode, Search, Comments,
+              Related News, and Recent Posts for better user experience.
             </p>
             <div class="small-tags">
-              <span>WordPress</span><span>UI/UX</span><span>Branding</span>
+              <span>WordPress</span><span>UI/UX</span><span>News</span>
             </div>
-            <span class="small-link muted">1 Year Experience</span>
+            <a
+              href="https://www.linkedin.com/posts/mazen-mostafa-353102225_webdevelopment-wordpress-newswebsite-ugcPost-7256638677135581184--ixQ/"
+              target="_blank"
+              class="small-link"
+            >
+              Live Demo →
+            </a>
+          </div>
+
+          <!-- Morocco Stitch & Tex EXPO -->
+          <div class="small-card reveal">
+            <div class="small-card-icon">🏭</div>
+            <h4>Morocco Stitch & Tex EXPO</h4>
+            <p>
+              Official WordPress website for an international textile & garment
+              expo, including exhibitor profiles, registration, and event
+              booking system.
+            </p>
+            <div class="small-tags">
+              <span>WordPress</span><span>Events</span><span>UI/UX</span>
+            </div>
+            <a
+              href="https://www.linkedin.com/posts/mazen-mostafa-353102225_moroccostitchandtex-wordpress-nicepage-ugcPost-7236306698926252032-w_sw/"
+              target="_blank"
+              class="small-link"
+            >
+              Live Demo →
+            </a>
           </div>
         </div>
       </div>
@@ -866,13 +913,16 @@
             </div>
           </div>
           <div class="contact-form-wrapper reveal">
+            <!-- Toast Notification -->
+            <div class="toast-container" id="toastContainer"></div>
+
             <form class="contact-form" id="contactForm" novalidate>
               <div class="form-group">
                 <label for="name">Name <span class="accent">*</span></label>
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="from_name"
                   placeholder="Your full name"
                   autocomplete="off"
                 />
@@ -883,7 +933,7 @@
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="reply_to"
                   placeholder="your@email.com"
                   autocomplete="off"
                 />
@@ -916,11 +966,9 @@
                 class="btn btn-primary btn-full"
                 id="submitBtn"
               >
-                <span>Send Message</span> <span class="btn-arrow">→</span>
+                <span class="btn-text">Send Message</span>
+                <span class="btn-arrow">→</span>
               </button>
-              <div class="form-success" id="formSuccess">
-                ✓ Message sent successfully! I'll get back to you soon.
-              </div>
             </form>
           </div>
         </div>

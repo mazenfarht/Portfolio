@@ -1,7 +1,6 @@
 /* =========================================
    MAZEN MOSTAFA — PORTFOLIO JS
    ========================================= */
-
 // ─── CURSOR ────────────────────────────────
 const cursor = document.getElementById("cursor");
 const cursorFollower = document.getElementById("cursorFollower");
@@ -198,9 +197,40 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
   });
 });
 
-// ─── CONTACT FORM VALIDATION ───────────────
+// ─── EMAILJS INIT ──────────────────────────
+// ⚠️  Replace with your actual EmailJS Public Key
+(function () {
+  emailjs.init("KP5mi6DBn6TsWj0jp");
+})();
+
+// ─── TOAST SYSTEM ──────────────────────────
+function showToast(message, type = "success") {
+  const container = document.getElementById("toastContainer");
+  if (!container) return;
+
+  const toast = document.createElement("div");
+  toast.className = `toast toast-${type}`;
+  toast.innerHTML = `
+    <span class="toast-icon">${type === "success" ? "✓" : "✕"}</span>
+    <span class="toast-msg">${message}</span>
+  `;
+
+  container.appendChild(toast);
+
+  // Trigger entrance animation
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => toast.classList.add("show"));
+  });
+
+  // Auto-remove after 5s
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 400);
+  }, 5000);
+}
+
+// ─── CONTACT FORM WITH EMAILJS ─────────────
 const form = document.getElementById("contactForm");
-const formSuccess = document.getElementById("formSuccess");
 
 function showError(fieldId, errorId, msg) {
   const field = document.getElementById(fieldId);
@@ -218,14 +248,12 @@ function clearError(fieldId, errorId) {
 ["name", "email", "message"].forEach((id) => {
   const el = document.getElementById(id);
   if (el) {
-    el.addEventListener("input", () => {
-      clearError(id, id + "Error");
-    });
+    el.addEventListener("input", () => clearError(id, id + "Error"));
   }
 });
 
 if (form) {
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     let valid = true;
 
@@ -259,18 +287,45 @@ if (form) {
       valid = false;
     }
 
-    if (valid) {
-      const btn = document.getElementById("submitBtn");
-      btn.disabled = true;
-      btn.innerHTML = "<span>Sending...</span>";
-      setTimeout(() => {
-        formSuccess.classList.add("show");
-        form.reset();
-        btn.disabled = false;
-        btn.innerHTML =
-          '<span>Send Message</span> <span class="btn-arrow">→</span>';
-        setTimeout(() => formSuccess.classList.remove("show"), 5000);
-      }, 1200);
+    if (!valid) return;
+
+    // ─── Disable button & show spinner ─────
+    const btn = document.getElementById("submitBtn");
+    const btnText = btn.querySelector(".btn-text");
+    const btnArrow = btn.querySelector(".btn-arrow");
+    const btnSpinner = btn.querySelector(".btn-spinner");
+
+    btn.disabled = true;
+    btnText.hidden = true;
+    btnArrow.hidden = true;
+    btnSpinner.hidden = false;
+
+    const resetBtn = () => {
+      btn.disabled = false;
+      btnText.hidden = false;
+      btnArrow.hidden = false;
+      btnSpinner.hidden = true;
+    };
+
+    try {
+      // ⚙️ Replace "YOUR_SERVICE_ID" and "YOUR_TEMPLATE_ID" with your EmailJS values
+      await emailjs.sendForm(
+        "service_exs1rr8",
+        "template_l0hziec",
+        form,
+        "KP5mi6DBn6TsWj0jp"
+      );
+
+      showToast("Message sent! I'll get back to you soon. 🚀", "success");
+      form.reset();
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      showToast(
+        "Failed to send message. Please try again or email me directly.",
+        "error"
+      );
+    } finally {
+      resetBtn();
     }
   });
 }
