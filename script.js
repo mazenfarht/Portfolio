@@ -298,13 +298,15 @@ if (form) {
     btn.disabled = true;
     btnText.hidden = true;
     btnArrow.hidden = true;
-    btnSpinner.hidden = false;
+    // btnSpinner.hidden = true;
+    btnSpinner.classList.remove("hidden");
 
     const resetBtn = () => {
       btn.disabled = false;
       btnText.hidden = false;
       btnArrow.hidden = false;
-      btnSpinner.hidden = true;
+      // btnSpinner.hidden = true;
+      btnSpinner.classList.add("hidden");
     };
 
     try {
