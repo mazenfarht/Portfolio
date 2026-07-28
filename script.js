@@ -256,6 +256,7 @@ if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     let valid = true;
+    console.log("Form Submitted");
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
