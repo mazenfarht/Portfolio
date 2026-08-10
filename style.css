@@ -1253,7 +1253,13 @@ body:has(button:hover) .cursor-follower {
 
 @media (max-width: 768px) {
   .section {
-    padding: 80px 0;
+    padding: 72px 0;
+  }
+
+  /* ── Projects: reduce giant gaps on mobile ── */
+  .projects-featured {
+    gap: 56px;
+    margin-bottom: 56px;
   }
 
   .nav-links {
@@ -1304,10 +1310,35 @@ body:has(button:hover) .cursor-follower {
   .project-card-inner.reverse {
     grid-template-columns: 1fr;
     direction: ltr;
-    gap: 32px;
+    gap: 28px;
   }
   .project-card-inner.reverse {
     direction: ltr;
+  }
+
+  /* Shrink oversized project number on mobile */
+  .project-num {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  /* Allow project links to wrap so deployment-badge never overflows */
+  .project-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Ensure deployment badge stays within the card width */
+  .deployment-badge {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* Tighten tag gap on narrow screens */
+  .project-tags-row {
+    gap: 5px;
+    margin-bottom: 12px;
   }
   .small-projects-grid {
     grid-template-columns: 1fr 1fr;
@@ -1345,6 +1376,60 @@ body:has(button:hover) .cursor-follower {
   }
   .stat-divider {
     display: none;
+  }
+
+  /* ── Section padding: tighter on very small screens ── */
+  .section {
+    padding: 56px 0;
+  }
+  .container {
+    padding: 0 16px;
+  }
+
+  /* ── Project card: further reduce for 320–430px ── */
+  .projects-featured {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .project-card-inner,
+  .project-card-inner.reverse {
+    gap: 20px;
+  }
+  .project-num {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .project-title {
+    font-size: 1.5rem;
+  }
+  .project-desc {
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+  .project-features li {
+    font-size: 0.84rem;
+  }
+  .ptag {
+    font-size: 0.67rem;
+    padding: 2px 7px;
+  }
+  .project-badge-featured,
+  .project-badge-graduation {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* ── Deployment badge: full-width pill on tiny screens ── */
+  .deployment-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    text-align: center;
+  }
+
+  /* ── Buttons: full width stacked in project-links ── */
+  .project-links .btn-sm {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -1564,13 +1649,13 @@ body:has(button:hover) .cursor-follower {
 /* ── PROJECT CATEGORY LABELS ── */
 .projects-category-label {
   font-size: 0.8rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   letter-spacing: 0.1em;
   color: var(--text-muted);
   text-transform: uppercase;
   margin: 3.5rem 0 1.5rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .projects-category-label:first-of-type {
   margin-top: 2rem;
@@ -1581,7 +1666,7 @@ body:has(button:hover) .cursor-follower {
 .project-badge-graduation {
   display: inline-block;
   font-size: 0.7rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   letter-spacing: 0.08em;
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
@@ -1601,7 +1686,11 @@ body:has(button:hover) .cursor-follower {
 
 /* ── CLINIC PLACEHOLDER VISUAL ── */
 .project-img-placeholder {
-  background: linear-gradient(135deg, rgba(0,229,160,0.06) 0%, rgba(0,229,160,0.02) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 229, 160, 0.06) 0%,
+    rgba(0, 229, 160, 0.02) 100%
+  );
   border: 1px solid rgba(0, 229, 160, 0.15);
   border-radius: 12px;
   display: flex;
@@ -1625,7 +1714,7 @@ body:has(button:hover) .cursor-follower {
 }
 .placeholder-stack {
   font-size: 0.78rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   color: var(--accent);
   margin-bottom: 0.75rem;
 }
@@ -1633,7 +1722,7 @@ body:has(button:hover) .cursor-follower {
   display: inline-block;
   font-size: 0.7rem;
   padding: 0.2rem 0.75rem;
-  border: 1px solid rgba(0,229,160,0.3);
+  border: 1px solid rgba(0, 229, 160, 0.3);
   border-radius: 4px;
   color: var(--text-muted);
 }
@@ -1644,7 +1733,7 @@ body:has(button:hover) .cursor-follower {
   align-items: center;
   gap: 0.35rem;
   font-size: 0.75rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   color: #f0a04a;
   background: rgba(240, 160, 74, 0.1);
   border: 1px solid rgba(240, 160, 74, 0.25);
@@ -1661,8 +1750,8 @@ body:has(button:hover) .cursor-follower {
   margin-top: 0.5rem;
 }
 .project-mini-card {
-  background: var(--card-bg, rgba(255,255,255,0.03));
-  border: 1px solid rgba(255,255,255,0.07);
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 12px;
   padding: 1.5rem;
   transition: border-color 0.25s, transform 0.25s;
@@ -1684,7 +1773,7 @@ body:has(button:hover) .cursor-follower {
 }
 .ptag-sm {
   font-size: 0.65rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
   background: rgba(0, 229, 160, 0.08);
@@ -1693,8 +1782,8 @@ body:has(button:hover) .cursor-follower {
 }
 .mini-card-num {
   font-size: 0.7rem;
-  font-family: 'Space Mono', monospace;
-  color: rgba(255,255,255,0.2);
+  font-family: "Space Mono", monospace;
+  color: rgba(255, 255, 255, 0.2);
 }
 .mini-card-title {
   font-size: 1rem;
@@ -1715,29 +1804,33 @@ body:has(button:hover) .cursor-follower {
 }
 .mini-link {
   font-size: 0.78rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
 }
-.mini-link:hover { color: var(--accent); }
+.mini-link:hover {
+  color: var(--accent);
+}
 .mini-link.primary {
   color: var(--accent);
   font-weight: 600;
 }
-.mini-link.primary:hover { opacity: 0.8; }
+.mini-link.primary:hover {
+  opacity: 0.8;
+}
 
 /* ── ADDITIONAL EXPERIENCE (de-emphasized) ── */
 .experience-additional {
   margin-top: 3rem;
   padding: 1.5rem;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 10px;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 .exp-add-label {
   font-size: 0.7rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -1751,29 +1844,33 @@ body:has(button:hover) .cursor-follower {
 }
 .exp-add-item {
   padding: 0.75rem 1rem;
-  border-left: 2px solid rgba(255,255,255,0.08);
+  border-left: 2px solid rgba(255, 255, 255, 0.08);
 }
 .exp-add-role {
   font-size: 0.82rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 .exp-add-company {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   margin: 0.2rem 0;
 }
 .exp-add-period {
   font-size: 0.68rem;
-  font-family: 'Space Mono', monospace;
-  color: rgba(255,255,255,0.2);
+  font-family: "Space Mono", monospace;
+  color: rgba(255, 255, 255, 0.2);
 }
 
 /* ── FREELANCE CTA SECTION ── */
 .freelance-cta {
-  background: linear-gradient(135deg, rgba(0,229,160,0.05) 0%, rgba(0,229,160,0.01) 100%);
-  border-top: 1px solid rgba(0,229,160,0.1);
-  border-bottom: 1px solid rgba(0,229,160,0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 229, 160, 0.05) 0%,
+    rgba(0, 229, 160, 0.01) 100%
+  );
+  border-top: 1px solid rgba(0, 229, 160, 0.1);
+  border-bottom: 1px solid rgba(0, 229, 160, 0.1);
 }
 .freelance-cta-inner {
   display: flex;
@@ -1784,7 +1881,7 @@ body:has(button:hover) .cursor-follower {
 }
 .freelance-cta-label {
   font-size: 0.75rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
@@ -1818,7 +1915,9 @@ body:has(button:hover) .cursor-follower {
     flex-direction: column;
     text-align: center;
   }
-  .freelance-cta-desc { max-width: 100%; }
+  .freelance-cta-desc {
+    max-width: 100%;
+  }
   .freelance-cta-actions {
     flex-direction: row;
     flex-wrap: wrap;
